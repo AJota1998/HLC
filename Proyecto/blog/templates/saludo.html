@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    {# Esto es un comentario #}
+
+    {% comment %}
+        Comentario1
+        Comentario2
+    {% endcomment %}
+
+    <h1>La persona se llama: {{nombre_persona}} {{apellido_persona}}</h1>
+    <p>La fecha actual es {{fecha_actual.day}}</p>
+
+    <p>La lista de los temas es:</p>
+    <ul>
+      {% if temas %} 
+         {% for tema in temas %}
+            <li>{{ tema }}</li>
+         {% endfor %}
+     {% else %}
+         <li>No hay temas</li>
+     {% endif %}
+    </ul>
+    
+</body>
+</html>
