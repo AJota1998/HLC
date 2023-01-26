@@ -53,5 +53,15 @@ class Persona(object):
         self.nombre = nombre
         self.apellido = apellido
 
+def curso_django(request):
+    fecha_actual = datetime.datetime.now()
+    return render(request, "curso_django.html", {"fecha_actual":fecha_actual})
+
+def curso_python(request):
+    fecha_actual = datetime.datetime.now()
+    return render(request, "curso_python.html", {"fecha_actual":fecha_actual})
+
+
+
 
 # Create your views here.
